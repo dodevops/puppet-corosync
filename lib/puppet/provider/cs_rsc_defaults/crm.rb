@@ -16,6 +16,8 @@ Puppet::Type.type(:cs_rsc_defaults).provide(:crm, parent: PuppetX::Voxpupuli::Co
   commands crm:           'crm'
   commands cibadmin:      'cibadmin'
 
+  defaultfor operatingsystem: [:ubuntu]
+
   def self.instances
     block_until_ready
 
